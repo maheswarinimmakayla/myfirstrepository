@@ -1,0 +1,420 @@
+maheswarin@MTLP-1431 MINGW64 ~/Desktop
+$ pwd
+/c/Users/maheswarin/Desktop
+
+maheswarin@MTLP-1431 MINGW64 ~/Desktop
+$ d:
+bash: d:: command not found
+
+maheswarin@MTLP-1431 MINGW64 ~/Desktop
+$ cd d:
+
+maheswarin@MTLP-1431 MINGW64 /d
+$ cd mouritechgitpractices
+bash: cd: mouritechgitpractices: No such file or directory
+
+maheswarin@MTLP-1431 MINGW64 /d
+$ cd Mouritech
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech
+$ mkdir gitexamples1
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech
+$ ls
+gitexamples/  gitexamples1/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech
+$ cd gitexamples
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ touch file11.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ touch file12.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ ls
+file1.text  file11.text  file12.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ rm file12.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ ls
+file1.text  file11.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ cat file12.text
+cat: file12.text: No such file or directory
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ cat file11.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ cat file11.text
+course:
+java
+c
+c++
+python
+angular
+dbms
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ mkdir dummy
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ ls
+dummy/  file1.text  file11.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ rmdir dummy
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ ls
+file1.text  file11.text
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples
+$ GIT init
+Initialized empty Git repository in D:/Mouritech/gitexamples/.git/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ pwd
+/d/Mouritech/gitexamples
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cd gitexanples1
+bash: cd: gitexanples1: No such file or directory
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git init
+Reinitialized existing Git repository in D:/Mouritech/gitexamples/.git/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ touch file.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ ls
+file.doc  file1.text  file11.text  gitexamples1/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git add file.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "file.doc commited"
+[master (root-commit) 9ac929b] file.doc commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git log
+commit 9ac929be61d4d751991c223c6707f148cea232a9 (HEAD -> master)
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:44:48 2021 +0530
+
+    file.doc commited
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ touch file11.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ ls
+file.doc  file1.text  file11.doc  file11.text  gitexamples1/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git add file11.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "file11.doc is commited"
+[master c63539e] file11.doc is commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file11.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git log
+commit c63539e0ea45d0b6404f85e06592fa9ec89a8aa6 (HEAD -> master)
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:47:02 2021 +0530
+
+    file11.doc is commited
+
+commit 9ac929be61d4d751991c223c6707f148cea232a9
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:44:48 2021 +0530
+
+    file.doc commited
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ touch file111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ touch file1111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ ls
+file.doc  file1.text  file11.doc  file11.text  file111.doc  file1111.doc  gitexamples1/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+        file111.doc
+        file1111.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "file111.doc is commited"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+        file111.doc
+        file1111.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git add file111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "file111.doc is commited"
+[master 3902efb] file111.doc is commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+        file1111.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat file1.text
+course list:
+java
+python
+angular
+reactive
+dbms
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+        file1111.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git add file1111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "file1111.doc is commited"
+[master 79a42c8] file1111.doc is commited
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ touch file1111a.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.text
+        file11.text
+        file1111a.doc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git add .
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git commit -m "multiple files are commited"
+[master 9a70fa8] multiple files are commited
+ 3 files changed, 13 insertions(+)
+ create mode 100644 file1.text
+ create mode 100644 file11.text
+ create mode 100644 file1111a.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git log
+commit 9a70fa8d8ed90c5ea5a9f7f7d8ba268f170fa48d (HEAD -> master)
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:54:41 2021 +0530
+
+    multiple files are commited
+
+commit 79a42c8e6f6d360bcff5f9c4bb4657ae885ac9f7
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:52:48 2021 +0530
+
+    file1111.doc is commited
+
+commit 3902efb9465266ee9815979306152dbbf8d13001
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:52:06 2021 +0530
+
+    file111.doc is commited
+
+commit c63539e0ea45d0b6404f85e06592fa9ec89a8aa6
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:47:02 2021 +0530
+
+    file11.doc is commited
+
+commit 9ac929be61d4d751991c223c6707f148cea232a9
+Author: maheswari <maheswarin.in@mouritech.com>
+Date:   Thu Dec 30 10:44:48 2021 +0530
+
+    file.doc commited
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git diff
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat file1.text
+course list:
+java
+python
+angular
+reactive
+dbms
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git diff
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git remote add origin https://github.com/maheswarinimmakayla/myfirstrepository.git
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git remote -v
+origin  https://github.com/maheswarinimmakayla/myfirstrepository.git (fetch)
+origin  https://github.com/maheswarinimmakayla/myfirstrepository.git (push)
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git log --oneline
+9a70fa8 (HEAD -> master) multiple files are commited
+79a42c8 file1111.doc is commited
+3902efb file111.doc is commited
+c63539e file11.doc is commited
+9ac929b file.doc commited
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git push origin master
+fatal: helper error (-1): One or more errors occurred.
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/maheswarinimmakayla/myfirstrepository.git/'
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git push origin master
+fatal: Response status code does not indicate success: 401 (Unauthorized).
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/maheswarinimmakayla/myfirstrepository.git/'
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (13/13), 1.10 KiB | 102.00 KiB/s, done.
+Total 13 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/maheswarinimmakayla/myfirstrepository.git
+ * [new branch]      master -> master
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git config credential.helper store
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git push origin master
+Everything up-to-date
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat fileabc.text
+cat: fileabc.text: No such file or directory
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat file1111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat file1111.doc
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ cat > file1111.doc
+dddsdsds text ddssd
+
+
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 703 bytes | 24.00 KiB/s, done.
+From https://github.com/maheswarinimmakayla/myfirstrepository
+   9a70fa8..97f0d8f  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ git pull origin master
+From https://github.com/maheswarinimmakayla/myfirstrepository
+ * branch            master     -> FETCH_HEAD
+Updating 9a70fa8..97f0d8f
+Fast-forward
+ fileabc1.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 fileabc1.txt
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$ ls
+file.doc  file1.text  file11.doc  file11.text  file111.doc  file1111.doc  file1111a.doc  fileabc1.txt  gitexamples1/
+
+maheswarin@MTLP-1431 MINGW64 /d/Mouritech/gitexamples (master)
+$
