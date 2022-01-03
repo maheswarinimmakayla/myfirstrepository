@@ -1,0 +1,97 @@
+use practice;
+show tables;
+desc library;
+create table library(  Book_Number int(20) not null,
+                       Book_code varchar(20) not null,
+					   Book_Issue varchar(20) default null,
+					   Cost_Each int(40)
+                               
+);
+select * from library;
+insert into library values('2323','232332','333','3333'
+);
+insert into library values('2327','232332','33543','33433'),
+						  ('2326','232332','3377','36783'),
+                          ('2322','232332','3783','37893'),
+						  ('2320','232332','3903','3573');
+    insert into library values('2001',2101,1,350.89),
+						   (200102,2102,0,250.89),
+                           (200103,2103,1,450.89),
+                           (200104,2104,0,250.89),
+                           (200105,2105,0,550.89),
+                           (200106,2106,1,250.89);
+
+create table Bookorder(   BookNumber int NOT NULL,  
+  orderDate date NOT NULL,  
+  shippedDate date DEFAULT NULL,  
+  Status varchar(50),  
+  PRIMARY KEY(BookNumber)  
+                               
+);
+desc Bookorder;
+select * from  Bookorder;
+insert into Bookorder values(200101,'2021-10-20','2021-10-21','done');
+insert into Bookorder values(200102,'2021-10-20','2021-10-21','In Progress'),
+							(200103,'2021-12-30',null,'In Progress'),
+                            (200104,'2021-12-29','2022-10-02','done'),
+                            (200105,'2022-01-01','2021-10-21','In Progress'),
+                            (200106,'2021-10-20','2021-10-21','done'),
+                            (200107,'2021-10-20','2021-10-21','done'),
+                            (200108,'2021-10-20','2021-10-21','done'),
+                            (200109,'2021-10-20','2021-10-21','done'),
+                            (200110,'2021-10-20','2021-10-21','done');
+drop table Bookorder ;
+
+-- Using IN  Operator in WHERE Clause
+SELECT * FROM Bookorder WHERE Booknumber IN(
+	SELECT Book_Number FROM library
+);
+
+-- Using Not In operator in where clause
+SELECT * FROM Bookorder WHERE Booknumber NOT IN(
+	SELECT Book_Number FROM library
+);
+
+-- Using any 
+ SELECT * FROM Bookorder WHERE Booknumber = ANY(
+	SELECT Book_Number FROM library
+);
+
+-- Using Exists and Not Exists
+SELECT * FROM Bookorder bo WHERE  Exists (
+	SELECT * from library lb where bo.Booknumber = lb.Book_Number
+);
+
+ SELECT * FROM Bookorder bo WHERE  NOT Exists (
+	SELECT * from library lb where bo.Booknumber = lb.Book_Number
+);
+
+-- -- correlated subquery example
+-- create payments table 
+create table payments(paymentId int primary key auto_increment,
+						customerId int,
+                        chequeNumber int,
+                        amount float);
+                        
+--- insert payments table
+  insert into payments(customerId,chequeNumber,amount) 
+			values (123,5670089,56000.00),
+					(123,5670095,16000.00),
+                    (125,5670098,10000.00),
+					(126,5670100,12000.00); 
+                    
+---- find the customer who made maximum payment                  
+select customerId,chequeNumber,amount from payments where 
+amount = (select MAX(amount) from payments);  
+
+-- find the customers whose payment is less than maximum payment
+select customerId,chequeNumber,amount from payments where 
+amount < (select MAX(amount) from payments);   
+
+-- find the customer payment details whose payment is greater than minimum payment
+select customerId,chequeNumber,amount from payments where 
+amount > (select MIN(amount) from payments);
+
+-- find the customer payment details whose payment is greater than average of all payments
+select customerId,chequeNumber,amount from payments where 
+amount > (select AVG(amount) from payments);                       
